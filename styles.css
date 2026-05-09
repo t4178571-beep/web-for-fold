@@ -1,0 +1,300 @@
+/* FOLDERCOP DESIGN SYSTEM */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap');
+
+:root {
+    /* LIGHT MODE (DEFAULT) */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-surface: rgba(255, 255, 255, 0.8);
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --accent: #4f46e5;
+    --accent-hover: #4338ca;
+    --border: #e2e8f0;
+    --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --nav-blur: 12px;
+}
+
+[data-theme="dark"] {
+    /* DARK MODE (PURE BLACK) */
+    --bg-primary: #000000;
+    --bg-secondary: #0f172a;
+    --bg-surface: rgba(15, 23, 42, 0.8);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #6366f1;
+    --accent-hover: #818cf8;
+    --border: #1e293b;
+    --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .logo-text {
+    font-family: 'Outfit', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--bg-surface);
+    backdrop-filter: blur(var(--nav-blur));
+    -webkit-backdrop-filter: blur(var(--nav-blur));
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.theme-toggle {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 10rem 0 6rem;
+    text-align: center;
+    background: radial-gradient(circle at top right, rgba(79, 70, 229, 0.05), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(79, 70, 229, 0.05), transparent 40%);
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, var(--text-primary) 60%, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(79, 70, 229, 0.3);
+}
+
+.btn-secondary {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+}
+
+.hero-visual {
+    margin-top: 4rem;
+    position: relative;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-visual img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+}
+
+/* SECTION COMMON */
+section {
+    padding: 8rem 0;
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-head h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* DOWNLOADS */
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.download-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    border-radius: 24px;
+    transition: 0.3s;
+}
+
+.download-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.version-info {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ABOUT */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.feature-list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--accent);
+}
+
+/* DONATE */
+.donate {
+    background: var(--bg-secondary);
+}
+
+.donate-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--bg-primary);
+    padding: 3rem;
+    border-radius: 32px;
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+/* CONTACT */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-field {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-family: inherit;
+}
+
+/* FOOTER */
+footer {
+    padding: 4rem 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 3rem; }
+    .about-content, .contact-grid { grid-template-columns: 1fr; }
+}

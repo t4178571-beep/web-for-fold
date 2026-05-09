@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-white text-matte-slate-900 font-inter transition-colors duration-300;
+  }
+}
+
+.dark body {
+  @apply bg-brand-black text-matte-slate-100;
+}
+
+/* Custom Matte Styles */
+.matte-card {
+  @apply bg-matte-slate-50 dark:bg-matte-slate-900/50 border border-matte-slate-200 dark:border-matte-slate-800 rounded-3xl p-8 transition-all duration-300;
+}
+
+.matte-btn-primary {
+  @apply bg-matte-cyan-500 hover:bg-matte-cyan-600 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-cyan-500/20 active:scale-95;
+}
+
+.matte-btn-secondary {
+  @apply bg-matte-slate-100 dark:bg-matte-slate-800 hover:bg-matte-slate-200 dark:hover:bg-matte-slate-700 text-matte-slate-900 dark:text-matte-slate-100 font-semibold py-3 px-6 rounded-2xl border border-matte-slate-200 dark:border-matte-slate-700 transition-all duration-300 active:scale-95;
+}
+
+.nav-link {
+  @apply text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-500 dark:hover:text-matte-cyan-400 font-medium transition-colors duration-200;
+}
+
+.nav-link.active {
+  @apply text-matte-cyan-600 dark:text-matte-cyan-400 font-semibold;
+}
+
+.hero-title {
+  @apply font-outfit text-5xl md:text-7xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-br from-matte-slate-900 via-matte-slate-800 to-matte-cyan-600 dark:from-white dark:via-matte-slate-200 dark:to-matte-cyan-400;
+}
