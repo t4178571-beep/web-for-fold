@@ -19,6 +19,7 @@ const FORM_ACTION =
 const ENTRY_NAME   = 'entry.1675211738'  // Donor Name
 const ENTRY_CITY   = 'entry.855489272'   // City
 const ENTRY_AMOUNT = 'entry.959160609'   // Donation Amount
+const ENTRY_EMAIL  = 'entry.1063322697'  // Email Address
 // ────────────────────────────────────────────────────────────────────────────
 
 // ─── CITY LIST ───────────────────────────────────────────────────────────────
@@ -71,7 +72,7 @@ const Donate = () => {
   const [error, setError]             = useState(false)
 
   // Inline donor form state
-  const [formData, setFormData]       = useState({ name: '', amount: '', city: '' })
+  const [formData, setFormData]       = useState({ name: '', amount: '', city: '', email: '' })
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [formLoading, setFormLoading] = useState(false)
 
@@ -144,6 +145,7 @@ const Donate = () => {
       body.append(ENTRY_NAME,   formData.name.trim())
       body.append(ENTRY_CITY,   formData.city)
       body.append(ENTRY_AMOUNT, formData.amount.trim())
+      if (formData.email.trim()) body.append(ENTRY_EMAIL, formData.email.trim())
       // Google Form auto-adds the Timestamp column — no need to send it manually.
 
       await fetch(FORM_ACTION, { method: 'POST', mode: 'no-cors', body })
@@ -216,7 +218,7 @@ const Donate = () => {
                 Your name will appear in the Hall of Fame after you complete your donation below.
               </p>
               <button
-                onClick={() => { setFormSubmitted(false); setFormData({ name: '', amount: '', city: '' }) }}
+                onClick={() => { setFormSubmitted(false); setFormData({ name: '', amount: '', city: '', email: '' }) }}
                 className="text-xs text-matte-slate-400 hover:text-matte-cyan-500 transition-colors underline"
               >
                 Submit another entry
@@ -237,6 +239,22 @@ const Donate = () => {
                   onChange={handleFormChange}
                   placeholder="e.g. Rahil Vahora"
                   required
+                  className="bg-matte-slate-50 dark:bg-matte-slate-900 border border-matte-slate-100 dark:border-matte-slate-800 p-4 rounded-2xl text-matte-slate-900 dark:text-white focus:ring-2 ring-matte-cyan-500/30 outline-none transition-all placeholder:text-matte-slate-300 dark:placeholder:text-matte-slate-600 font-medium"
+                />
+              </div>
+
+              {/* Email */}
+              <div className="flex flex-col gap-2">
+                <label className="text-xs font-bold uppercase tracking-widest text-matte-slate-400">
+                  Email Address{' '}
+                  <span className="normal-case font-normal opacity-60">(private — not shown publicly)</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleFormChange}
+                  placeholder="e.g. rahil@example.com"
                   className="bg-matte-slate-50 dark:bg-matte-slate-900 border border-matte-slate-100 dark:border-matte-slate-800 p-4 rounded-2xl text-matte-slate-900 dark:text-white focus:ring-2 ring-matte-cyan-500/30 outline-none transition-all placeholder:text-matte-slate-300 dark:placeholder:text-matte-slate-600 font-medium"
                 />
               </div>
