@@ -21,7 +21,7 @@ const Home = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-24 animate-in fade-in slide-in-from-bottom duration-1000 delay-300">
-          <a href="/FolderCop_Setup.exe" download="FolderCop_Setup.exe" className="matte-btn-primary flex items-center gap-2 shadow-xl shadow-matte-cyan-500/20 group text-lg px-10">
+          <a href="https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe" className="matte-btn-primary flex items-center gap-2 shadow-xl shadow-matte-cyan-500/20 group text-lg px-10">
             Get Foldercop Free <Download size={20} className="transition-transform group-hover:translate-y-1" />
           </a>
           <Link to="/about" className="matte-btn-secondary flex items-center gap-2 group text-lg px-10">
@@ -112,7 +112,7 @@ const Home = () => {
             Foldercop is free, private, and built for professionals. Join the future of Windows file management today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="/FolderCop_Setup.exe" download="FolderCop_Setup.exe" className="matte-btn-primary md:px-12 md:py-4 shadow-2xl shadow-cyan-500/20 active:scale-95 text-lg">
+            <a href="https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe" className="matte-btn-primary md:px-12 md:py-4 shadow-2xl shadow-cyan-500/20 active:scale-95 text-lg">
               Download Now
             </a>
             <a href={`https://wa.me/${whatsapp.replace('+', '')}`} target="_blank" rel="noopener noreferrer" className="matte-btn-secondary bg-white/10 dark:bg-white/5 border-white/20 text-white hover:bg-white/20 active:scale-95 text-lg">

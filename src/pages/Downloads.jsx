@@ -7,14 +7,14 @@ const Downloads = () => {
 
     const downloadLinks = {
         x64: {
-            setup: "https://github.com/yasinvahora56/foldercop/releases/download/v1.0.0/FolderCop_1.0.0_x64-setup.exe",
-            portable: "https://github.com/yasinvahora56/foldercop/releases/download/v1.0.0/foldercop_1.0.0_x64-portable.zip",
-            sig: "https://github.com/yasinvahora56/foldercop/releases/download/v1.0.0/FolderCop_1.0.0_x64-setup.exe.sig"
+            setup: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe",
+            portable: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe",
+            sig: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe"
         },
         x86: {
-            setup: "https://github.com/yasinvahora56/foldercop/releases/download/v1.0.0/FolderCop_1.0.0_x86-setup.exe",
-            portable: "https://github.com/yasinvahora56/foldercop/releases/download/v1.0.0/foldercop_1.0.0_x86-portable.zip",
-            sig: "https://github.com/yasinvahora56/foldercop/releases/download/v1.0.0/FolderCop_1.0.0_x86-setup.exe.sig"
+            setup: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe",
+            portable: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe",
+            sig: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe"
         }
     }
 
