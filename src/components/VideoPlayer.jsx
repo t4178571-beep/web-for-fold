@@ -68,6 +68,8 @@ const VideoPlayer = ({ src, muted = true, className = '' }) => {
 
   const openFullscreen = (e) => {
     e.stopPropagation()
+    // Pause the inline video so only fullscreen video plays (no double audio)
+    if (videoRef.current) videoRef.current.pause()
     setIsFullscreen(true)
   }
 

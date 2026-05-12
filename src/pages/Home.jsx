@@ -47,9 +47,8 @@ const Home = () => {
 
         {/* ── VIDEO SECTION ── */}
         <div className="animate-in fade-in slide-in-from-bottom duration-1000 delay-500 w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto px-0 sm:px-2">
+          <div className="max-w-3xl mx-auto px-0 sm:px-2">
             <VideoPlayer src="/foldercop.mp4" muted={false} />
-            <VideoPlayer src="/Lets.webm" muted={false} />
           </div>
         </div>
       </section>
