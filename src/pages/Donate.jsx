@@ -169,23 +169,23 @@ const Donate = () => {
       : String(amount)
 
   return (
-    <div className="pt-32 pb-24 overflow-hidden">
+    <div className="pt-24 sm:pt-32 pb-24 overflow-hidden">
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="container mx-auto px-6 text-center mb-20 animate-in fade-in slide-in-from-bottom duration-1000">
+      <section className="container mx-auto px-4 sm:px-6 text-center mb-12 sm:mb-20 animate-in fade-in slide-in-from-bottom duration-1000">
         <div className="inline-flex items-center gap-2 bg-pink-500/10 py-1.5 px-4 rounded-full text-pink-600 dark:text-pink-400 font-bold text-xs uppercase tracking-widest mb-10 shadow-sm border border-pink-500/20">
           <Heart size={14} className="fill-pink-500" /> Support the Vision
         </div>
-        <h1 className="hero-title mb-8 tracking-tight">Support Our Core Team.</h1>
-        <p className="text-matte-slate-600 dark:text-matte-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+        <h1 className="hero-title mb-6 sm:mb-8 tracking-tight text-4xl sm:text-6xl md:text-7xl">Support Our Core Team.</h1>
+        <p className="text-matte-slate-600 dark:text-matte-slate-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed px-2">
           Foldercop is free and open source, built by two developers in their spare time.
           Even a small contribution keeps the project alive and improving.
         </p>
       </section>
 
       {/* ── Inline Donor Registration Form ───────────────────────────────── */}
-      <section className="container mx-auto px-6 max-w-2xl mb-16">
-        <div className="matte-card bg-white dark:bg-[#0c0c0c] border border-matte-slate-100 dark:border-matte-slate-800 p-10 relative overflow-hidden shadow-xl">
+      <section className="container mx-auto px-4 sm:px-6 max-w-2xl mb-12 sm:mb-16">
+        <div className="matte-card bg-white dark:bg-[#0c0c0c] border border-matte-slate-100 dark:border-matte-slate-800 p-6 sm:p-10 relative overflow-hidden shadow-xl">
           {/* Decorative glow */}
           <div className="absolute top-0 right-0 w-48 h-48 bg-pink-500/5 blur-[80px] pointer-events-none" />
 
@@ -320,7 +320,7 @@ const Donate = () => {
       </section>
 
       {/* ── Donation Method Cards ─────────────────────────────────────────── */}
-      <section className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mb-24">
+      <section className="container mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mb-16 sm:mb-24">
 
         {/* ── UPI Card ── */}
         <div className="matte-card hover:-translate-y-1 hover:shadow-xl transition-all duration-300 relative group flex flex-col items-center text-center p-8 border-2 border-matte-cyan-500/20 shadow-lg shadow-cyan-500/5 bg-white dark:bg-matte-slate-900/60 col-span-1 md:col-span-1">
@@ -426,8 +426,8 @@ const Donate = () => {
       </section>
 
       {/* ── Security Strip ───────────────────────────────────────────────── */}
-      <section className="container mx-auto px-6 max-w-5xl mb-24">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <section className="container mx-auto px-4 sm:px-6 max-w-5xl mb-16 sm:mb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
           {[
             { icon: <ShieldCheck size={16} />, text: 'Your data is used only for support purposes.' },
             { icon: <Zap size={16} />, text: 'No subscription — donate once, anytime.' },
@@ -442,10 +442,10 @@ const Donate = () => {
       </section>
 
       {/* ── Hall of Fame ─────────────────────────────────────────────────── */}
-      <section className="container mx-auto px-6 max-w-5xl">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+      <section className="container mx-auto px-4 sm:px-6 max-w-5xl">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10">
           <div>
-            <h2 className="font-outfit text-3xl md:text-4xl font-extrabold tracking-tight mb-1">
+            <h2 className="font-outfit text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-1">
               Hall of Fame
             </h2>
             <p className="text-matte-slate-500 dark:text-matte-slate-400 text-sm font-medium">
@@ -469,7 +469,7 @@ const Donate = () => {
           </div>
         </div>
 
-        <div className="matte-card p-0 overflow-hidden border border-matte-slate-100 dark:border-matte-slate-800 shadow-xl">
+        <div className="matte-card p-0 overflow-hidden border border-matte-slate-100 dark:border-matte-slate-800 shadow-xl overflow-x-auto">
 
           {/* ── Table ── */}
           {!loading && !error && supporters.length > 0 && (
@@ -554,7 +554,7 @@ const Donate = () => {
           )}
         </div>
 
-        <div className="flex items-center justify-between mt-6 px-1">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-6 px-1 gap-2">
           <p className="text-xs text-matte-slate-400 uppercase tracking-[0.15em] font-bold">
             Live from Google Sheets · auto-refreshes every 2 min
           </p>

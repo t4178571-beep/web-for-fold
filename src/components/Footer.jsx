@@ -7,11 +7,11 @@ const Footer = () => {
     const whatsapp = '+917990471946'
 
   return (
-    <footer className="bg-matte-slate-50 dark:bg-black border-t border-matte-slate-100 dark:border-matte-slate-900 pt-16 pb-12">
-      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer className="bg-matte-slate-50 dark:bg-black border-t border-matte-slate-100 dark:border-matte-slate-900 pt-12 sm:pt-16 pb-10 sm:pb-12">
+      <div className="container mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12">
         {/* Brand */}
         <div>
-          <Link to="/" className="flex items-center gap-2 mb-6">
+          <Link to="/" className="flex items-center gap-2 mb-5 sm:mb-6">
             <div className="bg-matte-cyan-500 p-1 rounded-lg text-white">
               <Folder size={18} />
             </div>
@@ -19,7 +19,7 @@ const Footer = () => {
               Foldercop
             </span>
           </Link>
-          <p className="text-matte-slate-600 dark:text-matte-slate-400 mb-6 max-w-sm">
+          <p className="text-matte-slate-600 dark:text-matte-slate-400 mb-5 sm:mb-6 max-w-sm text-sm sm:text-base">
             Experience the future of local file management. Index millions of files in seconds.
           </p>
           <div className="flex gap-4">
@@ -44,20 +44,20 @@ const Footer = () => {
 
         {/* Links */}
         <div>
-          <h4 className="font-outfit font-bold text-matte-slate-900 dark:text-white mb-6 uppercase tracking-wider text-sm">
+          <h4 className="font-outfit font-bold text-matte-slate-900 dark:text-white mb-5 sm:mb-6 uppercase tracking-wider text-sm">
             Quick Links
           </h4>
           <ul className="flex flex-col gap-3">
-            <li><Link to="/about" className="text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-500 transition-colors">How it works</Link></li>
-            <li><Link to="/downloads" className="text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-500 transition-colors">Download Stable</Link></li>
-            <li><Link to="/donate" className="text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-500 transition-colors">Support Development</Link></li>
-            <li><Link to="/contact" className="text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-500 transition-colors">Get Help</Link></li>
+            <li><Link to="/about" className="text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-500 transition-colors text-sm sm:text-base">How it works</Link></li>
+            <li><Link to="/downloads" className="text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-500 transition-colors text-sm sm:text-base">Download Stable</Link></li>
+            <li><Link to="/donate" className="text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-500 transition-colors text-sm sm:text-base">Support Development</Link></li>
+            <li><Link to="/contact" className="text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-500 transition-colors text-sm sm:text-base">Get Help</Link></li>
           </ul>
         </div>
 
         {/* Support */}
-        <div>
-          <div className="matte-card bg-white dark:bg-matte-slate-900/40 p-6 flex flex-col gap-4">
+        <div className="sm:col-span-2 md:col-span-1">
+          <div className="matte-card bg-white dark:bg-matte-slate-900/40 p-5 sm:p-6 flex flex-col gap-4">
             <h4 className="font-outfit font-bold text-matte-slate-900 dark:text-white">Built for Efficiency</h4>
             <p className="text-matte-slate-600 dark:text-matte-slate-400 text-sm">
               Foldercop is available and free for everyone. Supporting the project helps keep it alive.
@@ -69,8 +69,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 mt-16 pt-8 border-t border-matte-slate-100 dark:border-matte-slate-900 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p className="text-matte-slate-500 dark:text-matte-slate-500 text-sm font-medium">
+      <div className="container mx-auto px-4 sm:px-6 mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-matte-slate-100 dark:border-matte-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
+        <p className="text-matte-slate-500 dark:text-matte-slate-500 text-sm font-medium text-center sm:text-left">
           &copy; 2026 Foldercop. All rights reserved.
         </p>
         <p className="text-matte-slate-500 dark:text-matte-slate-500 text-sm font-medium flex items-center">
