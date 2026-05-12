@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Sun, Moon, Folder, Menu, X } from 'lucide-react'
+import { Sun, Moon, Menu, X } from 'lucide-react'
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -26,9 +26,13 @@ const Navbar = ({ theme, toggleTheme }) => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="bg-matte-cyan-500 p-1.5 rounded-lg text-white transition-transform group-hover:scale-110">
-            <Folder size={24} strokeWidth={2.5} />
-          </div>
+          <img
+            src="/logo.png"
+            alt="Foldercop logo"
+            width="40"
+            height="40"
+            className="w-10 h-10 object-contain transition-transform group-hover:scale-110 drop-shadow-sm"
+          />
           <span className="font-outfit text-2xl font-bold tracking-tight text-matte-slate-900 dark:text-white">
             Foldercop
           </span>

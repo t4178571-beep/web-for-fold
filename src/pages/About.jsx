@@ -10,7 +10,7 @@ const AboutPage = () => {
           <h1 className="hero-title mb-4 sm:mb-6 font-extrabold tracking-tighter text-4xl sm:text-6xl md:text-7xl">Ultimate Speed. Ultimate Control.</h1>
           <p className="text-matte-slate-600 dark:text-matte-slate-400 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed px-2">
             Foldercop was engineered for power users who demand instantaneous file search without compromise. 
-            Native Windows performance, built entirely in Rust.
+            Native Windows performance, built entirely in C++.
           </p>
         </div>
       </section>
@@ -48,7 +48,7 @@ const AboutPage = () => {
                Zero lag. Zero waiting.
             </p>
             <div className="flex items-center gap-4 text-matte-slate-900 dark:text-white font-bold">
-               <Zap size={20} className="text-matte-cyan-500" /> Rust-Powered Engine
+               <Zap size={20} className="text-matte-cyan-500" /> C++ Powered Engine
             </div>
           </div>
         </div>

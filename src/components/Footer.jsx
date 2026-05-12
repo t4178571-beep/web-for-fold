@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, MessageCircle, Heart, Folder } from 'lucide-react'
+import { Mail, MessageCircle, Heart } from 'lucide-react'
 
 const Footer = () => {
     const email = '11iamyasin@gmail.com'
@@ -12,9 +12,13 @@ const Footer = () => {
         {/* Brand */}
         <div>
           <Link to="/" className="flex items-center gap-2 mb-5 sm:mb-6">
-            <div className="bg-matte-cyan-500 p-1 rounded-lg text-white">
-              <Folder size={18} />
-            </div>
+            <img
+              src="/logo.png"
+              alt="Foldercop logo"
+              width="32"
+              height="32"
+              className="w-8 h-8 object-contain"
+            />
             <span className="font-outfit text-xl font-bold tracking-tight text-matte-slate-900 dark:text-white">
               Foldercop
             </span>
@@ -52,6 +56,8 @@ const Footer = () => {
             <li><Link to="/downloads" className="text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-500 transition-colors text-sm sm:text-base">Download Stable</Link></li>
             <li><Link to="/donate" className="text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-500 transition-colors text-sm sm:text-base">Support Development</Link></li>
             <li><Link to="/contact" className="text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-500 transition-colors text-sm sm:text-base">Get Help</Link></li>
+            <li><Link to="/about-us" className="text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-500 transition-colors text-sm sm:text-base">About Us</Link></li>
+            <li><Link to="/privacy-policy" className="text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-500 transition-colors text-sm sm:text-base">Privacy Policy</Link></li>
           </ul>
         </div>
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Heart, CreditCard, Copy, Check, Calendar, RefreshCw, ExternalLink, Send, Globe, ShieldCheck, Zap } from 'lucide-react'
+import { Heart, CreditCard, Copy, Check, Calendar, RefreshCw, Send, ShieldCheck, Zap } from 'lucide-react'
 
 // ─── CONFIG ─────────────────────────────────────────────────────────────────
 // Publish-to-web TSV URL (for Hall of Fame display)
@@ -320,10 +320,10 @@ const Donate = () => {
       </section>
 
       {/* ── Donation Method Cards ─────────────────────────────────────────── */}
-      <section className="container mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mb-16 sm:mb-24">
+      <section className="container mx-auto px-4 sm:px-6 max-w-md mb-16 sm:mb-24">
 
         {/* ── UPI Card ── */}
-        <div className="matte-card hover:-translate-y-1 hover:shadow-xl transition-all duration-300 relative group flex flex-col items-center text-center p-8 border-2 border-matte-cyan-500/20 shadow-lg shadow-cyan-500/5 bg-white dark:bg-matte-slate-900/60 col-span-1 md:col-span-1">
+        <div className="matte-card hover:-translate-y-1 hover:shadow-xl transition-all duration-300 relative group flex flex-col items-center text-center p-8 border-2 border-matte-cyan-500/20 shadow-lg shadow-cyan-500/5 bg-white dark:bg-matte-slate-900/60">
           <div className="absolute inset-0 bg-gradient-to-br from-matte-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
           <div className="w-14 h-14 bg-matte-cyan-500/10 rounded-2xl flex items-center justify-center text-matte-cyan-600 dark:text-matte-cyan-400 mb-4 mx-auto">
             <CreditCard size={24} />
@@ -353,74 +353,6 @@ const Donate = () => {
           >
             Open UPI App
           </a>
-        </div>
-
-        {/* ── Ko-fi Card (PayPal & Card) ── */}
-        <div className="matte-card hover:-translate-y-1 hover:shadow-xl transition-all duration-300 relative group flex flex-col items-center text-center p-8">
-          <div className="absolute top-0 left-0 w-24 h-24 bg-orange-500/5 blur-[40px] -z-10 group-hover:scale-150 transition-transform duration-1000" />
-          <div className="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-500 mb-4 mx-auto text-2xl">
-            ☕
-          </div>
-          <h3 className="font-outfit text-lg font-extrabold text-matte-slate-900 dark:text-white mb-1">
-            Ko-fi
-          </h3>
-          <p className="text-matte-slate-500 dark:text-matte-slate-400 text-xs mb-2 flex-grow">
-            One-time or recurring support. No account needed.
-          </p>
-
-          {/* PayPal & Card badges */}
-          <div className="flex flex-wrap justify-center gap-2 mb-6 mt-2">
-            <span className="bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 px-3 py-1 rounded-full text-xs font-bold">
-              PayPal
-            </span>
-            <span className="bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20 px-3 py-1 rounded-full text-xs font-bold">
-              Credit Card
-            </span>
-            <span className="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-xs font-bold">
-              Debit Card
-            </span>
-          </div>
-
-          <a
-            href="https://ko-fi.com/foldercop"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="matte-btn-primary w-full text-sm uppercase tracking-wider font-bold text-center flex items-center justify-center gap-2 py-3"
-          >
-            Donate via Ko-fi <ExternalLink size={13} />
-          </a>
-          <p className="text-matte-slate-400 text-xs mt-3">
-            Best for international donors 🌍
-          </p>
-        </div>
-
-        {/* ── PayPal Direct Card ── */}
-        <div className="matte-card hover:-translate-y-1 hover:shadow-xl transition-all duration-300 relative group flex flex-col items-center text-center p-8">
-          <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 blur-[40px] -z-10 group-hover:scale-150 transition-transform duration-1000" />
-          <div className="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4 mx-auto">
-            <Globe size={24} />
-          </div>
-          <h3 className="font-outfit text-lg font-extrabold text-matte-slate-900 dark:text-white mb-1">
-            PayPal / Card
-          </h3>
-          <p className="text-matte-slate-500 dark:text-matte-slate-400 text-xs mb-6 flex-grow">
-            Direct PayPal transfer. Works worldwide with any card.
-          </p>
-
-          <a
-            href="https://paypal.me/yasinvahora"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="matte-btn-secondary w-full text-sm uppercase tracking-wider font-bold text-center flex items-center justify-center gap-2 py-3 border-blue-200 dark:border-blue-900 hover:border-blue-400 text-blue-600 dark:text-blue-400"
-          >
-            Open PayPal <ExternalLink size={13} />
-          </a>
-          <p className="text-matte-slate-400 text-xs mt-3">
-            paypal.me/yasinvahora
-          </p>
-
-          {/* Replace note */}
-          {/* ⚠️ Update the PayPal.me link above with your actual PayPal.me username */}
         </div>
 
       </section>
