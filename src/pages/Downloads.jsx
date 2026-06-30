@@ -2,19 +2,19 @@ import React from 'react'
 import { Download, Monitor, HardDrive, ShieldCheck, Zap, FileCode } from 'lucide-react'
 
 const Downloads = () => {
-    const version = "1.0.0"
-    const releaseDate = "April 2026"
+    const version = "1.1.0"
+    const releaseDate = "June 2026"
 
     const downloadLinks = {
         x64: {
-            setup: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe",
-            portable: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe",
-            sig: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe"
+            setup: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.1.0/FolderCop_Setup.exe",
+            portable: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.1.0/FolderCop_Setup.exe",
+            sig: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.1.0/FolderCop_Setup.exe"
         },
         x86: {
-            setup: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe",
-            portable: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe",
-            sig: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe"
+            setup: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.1.0/FolderCop_Setup.exe",
+            portable: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.1.0/FolderCop_Setup.exe",
+            sig: "https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.1.0/FolderCop_Setup.exe"
         }
     }
 
@@ -93,7 +93,7 @@ const Downloads = () => {
       </section>
 
       {/* Security Features */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 sm:py-32 max-w-5xl">
+      <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-24 max-w-5xl">
          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
             {[
                { icon: <ShieldCheck className="text-emerald-500" />, title: "Code Signed", desc: "Our binaries are signed to ensure authenticity and prevent tampering." },
@@ -109,6 +109,41 @@ const Downloads = () => {
                </div>
             ))}
          </div>
+      </section>
+
+      {/* Previous Releases */}
+      <section className="container mx-auto px-4 sm:px-6 pb-20 max-w-4xl text-center">
+        <h3 className="font-outfit text-2xl sm:text-3xl font-extrabold text-matte-slate-900 dark:text-white mb-3">
+          Previous Releases
+        </h3>
+        <p className="text-matte-slate-500 dark:text-matte-slate-400 text-sm sm:text-base mb-8 max-w-xl mx-auto">
+          Need an older version? Access our previous builds below. We recommend always using the latest release for security and performance.
+        </p>
+        <div className="matte-card p-6 border border-matte-slate-100 dark:border-matte-slate-800 bg-white/50 dark:bg-matte-slate-900/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-4 text-left">
+            <div className="w-12 h-12 bg-matte-slate-100 dark:bg-matte-slate-800 rounded-xl flex items-center justify-center text-matte-slate-500">
+              <Download size={20} />
+            </div>
+            <div>
+              <h4 className="font-outfit font-bold text-matte-slate-900 dark:text-white">FolderCop v1.0.0</h4>
+              <p className="text-xs text-matte-slate-500 dark:text-matte-slate-400 font-medium">Released: April 2026 • Windows 64-bit / 32-bit</p>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <a 
+              href="https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe" 
+              className="matte-btn-secondary py-2 px-4 text-xs font-bold border-matte-slate-200 dark:border-matte-slate-800 bg-transparent hover:bg-matte-slate-50 dark:hover:bg-matte-slate-900"
+            >
+              Download Setup (x64)
+            </a>
+            <a 
+              href="https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe" 
+              className="matte-btn-secondary py-2 px-4 text-xs font-bold border-matte-slate-200 dark:border-matte-slate-800 bg-transparent hover:bg-matte-slate-50 dark:hover:bg-matte-slate-900"
+            >
+              Download Setup (x86)
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* Version Info */}

@@ -15,7 +15,7 @@ const Home = () => {
 
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-matte-slate-50 dark:bg-matte-slate-900 border border-matte-slate-200 dark:border-matte-slate-800 py-1.5 px-3 sm:px-4 rounded-full text-matte-slate-600 dark:text-matte-slate-400 font-bold text-[10px] sm:text-xs uppercase tracking-widest mb-5 sm:mb-10 shadow-sm animate-in fade-in slide-in-from-bottom duration-700">
-          <Zap size={12} className="text-matte-cyan-500 fill-matte-cyan-500" /> Latest version 1.0.0 available
+          <Zap size={12} className="text-matte-cyan-500 fill-matte-cyan-500" /> Latest version 1.1.0 available
         </div>
 
         {/* Headline */}
@@ -32,7 +32,7 @@ const Home = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-10 sm:mb-20 animate-in fade-in slide-in-from-bottom duration-1000 delay-300 px-4">
           <a
-            href="https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe"
+            href="https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.1.0/FolderCop_Setup.exe"
             className="matte-btn-primary flex items-center justify-center gap-2 shadow-xl shadow-matte-cyan-500/20 group text-sm sm:text-lg px-6 sm:px-10 py-3 sm:py-4 w-full sm:w-auto"
           >
             Get Foldercop Free <Download size={16} className="transition-transform group-hover:translate-y-1" />
@@ -168,7 +168,7 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2">
             <a
-              href="https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.0.0/FolderCop_Setup.exe"
+              href="https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.1.0/FolderCop_Setup.exe"
               className="matte-btn-primary md:px-12 md:py-4 shadow-2xl shadow-cyan-500/20 active:scale-95 text-sm sm:text-lg w-full sm:w-auto"
             >
               Download Now
