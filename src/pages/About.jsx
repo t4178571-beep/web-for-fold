@@ -1,143 +1,144 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Rocket, ShieldCheck, Eye, Keyboard, LayoutGrid, Download, Globe, Archive, Zap, Search } from 'lucide-react'
+import { ShieldCheck, Eye, Keyboard, LayoutGrid, Download, Zap } from 'lucide-react'
 
 const AboutPage = () => {
   return (
-    <div className="pt-24 sm:pt-32 pb-24 overflow-hidden">
-      <section className="container mx-auto px-4 sm:px-6 mb-16 sm:mb-24">
-        <div className="flex flex-col items-center text-center animate-in fade-in slide-in-from-bottom duration-1000">
-          <h1 className="hero-title mb-4 sm:mb-6 font-extrabold tracking-tighter text-4xl sm:text-6xl md:text-7xl">Ultimate Speed. Ultimate Control.</h1>
-          <p className="text-matte-slate-600 dark:text-matte-slate-400 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed px-2">
-            Foldercop was engineered for power users who demand instantaneous file search without compromise. 
-            Native Windows performance, built entirely in C++.
-          </p>
-        </div>
+    <div className="pt-24 sm:pt-32 pb-20">
+      <section className="container mx-auto px-4 sm:px-6 mb-16 sm:mb-20 text-center">
+        <h1 className="hero-title mb-4 max-w-4xl mx-auto">Ultimate Speed. Ultimate Control.</h1>
+        <p className="text-matte-slate-600 dark:text-matte-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          Foldercop was engineered for power users who demand instantaneous file retrieval without compromise. 
+          Native Windows performance, built entirely in C++.
+        </p>
       </section>
 
       {/* Feature Breakdown Sections */}
-      <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-20 space-y-24 sm:space-y-40">
+      <section className="container mx-auto px-4 sm:px-6 space-y-16 sm:space-y-24 max-w-5xl">
         
         {/* 1. Offline & Speed */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-24 items-center">
-          <div className="matte-card p-8 sm:p-12 bg-white dark:bg-black relative overflow-hidden group border border-matte-slate-100 dark:border-matte-slate-900 shadow-2xl">
-            <div className="absolute top-0 left-0 w-32 h-32 bg-matte-cyan-500/10 blur-[60px] -z-10 group-hover:scale-150 transition-transform duration-1000"></div>
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-matte-cyan-500/10 rounded-2xl flex items-center justify-center text-matte-cyan-600 dark:text-matte-cyan-400 mb-6 sm:mb-8">
-              <ShieldCheck size={28} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
+          <div className="matte-card p-6 sm:p-8 flex flex-col justify-between">
+            <div className="w-11 h-11 bg-matte-cyan-500/10 rounded-lg flex items-center justify-center text-matte-cyan-600 dark:text-matte-cyan-400 mb-5">
+              <ShieldCheck size={24} />
             </div>
-            <h2 className="font-outfit text-2xl sm:text-4xl font-extrabold text-matte-slate-900 dark:text-white mb-4 sm:mb-6 tracking-tight">
-              Privacy First.<br />100% Offline.
+            <h2 className="font-outfit text-2xl font-bold text-matte-slate-900 dark:text-white mb-3">
+              Privacy First. 100% Offline.
             </h2>
-            <p className="text-matte-slate-600 dark:text-matte-slate-400 text-base sm:text-lg leading-relaxed">
-              Privacy is not a feature; it is our foundation. Foldercop works entirely offline. 
-              Your computer's data remains on your machine. We do not track and we do not store your search history.
+            <p className="text-matte-slate-600 dark:text-matte-slate-400 text-sm sm:text-base leading-relaxed mb-6">
+              Privacy is not a setting; it is our architecture. Foldercop executes completely offline. 
+              Your computer's data remains on your local disk. We do not track, send, or store your queries anywhere.
             </p>
-            <div className="mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
-              <div className="bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 px-3 sm:px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">Zero Tracking</div>
-              <div className="bg-matte-cyan-500/10 text-matte-cyan-600 border border-matte-cyan-500/20 px-3 sm:px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">Fast Index</div>
+            <div className="flex flex-wrap gap-2">
+              <span className="bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-2.5 py-0.5 rounded-md text-xs font-semibold">
+                Zero Telemetry
+              </span>
+              <span className="bg-matte-cyan-50 dark:bg-matte-cyan-950/80 text-matte-cyan-700 dark:text-matte-cyan-300 border border-matte-cyan-200 dark:border-matte-cyan-800 px-2.5 py-0.5 rounded-md text-xs font-semibold">
+                Local Index Only
+              </span>
             </div>
           </div>
           <div>
-            <h3 className="text-matte-cyan-500 font-bold uppercase tracking-widest text-sm mb-4">Core Performance</h3>
-            <h2 className="font-outfit text-3xl sm:text-4xl md:text-6xl font-extrabold text-matte-slate-900 dark:text-white mb-6 sm:mb-8 tracking-tighter leading-none">
-              In-Memory Speed.
-            </h2>
-            <p className="text-matte-slate-600 dark:text-matte-slate-400 text-base sm:text-lg leading-relaxed mb-8">
-               Utilizing the Windows USN Journal, Foldercop builds a high-performance in-memory index of your drives. 
-               This results in instant search results, regardless of how deep your files are buried. 
-               Zero lag. Zero waiting.
+            <span className="text-matte-cyan-600 dark:text-matte-cyan-400 font-semibold uppercase tracking-wider text-xs block mb-2">Core Performance</span>
+            <h3 className="font-outfit text-2xl sm:text-3xl font-bold text-matte-slate-900 dark:text-white mb-4">
+              In-Memory USN Journal Indexing
+            </h3>
+            <p className="text-matte-slate-600 dark:text-matte-slate-400 text-sm sm:text-base leading-relaxed mb-6">
+              By reading the Windows NTFS Update Sequence Number (USN) Journal, Foldercop monitors every file operation with zero system overhead. 
+              Search queries return across millions of records in milliseconds.
             </p>
-            <div className="flex items-center gap-4 text-matte-slate-900 dark:text-white font-bold">
-               <Zap size={20} className="text-matte-cyan-500" /> C++ Powered Engine
+            <div className="inline-flex items-center gap-2 text-sm font-semibold text-matte-slate-800 dark:text-matte-200">
+              <Zap size={16} className="text-matte-cyan-600 dark:text-matte-cyan-400" />
+              <span>Optimized C++ Native Kernel Engine</span>
             </div>
           </div>
         </div>
 
         {/* 2. Global Shortcut */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-24 items-center">
-           <div className="order-last md:order-first">
-             <h3 className="text-matte-cyan-500 font-bold uppercase tracking-widest text-sm mb-4">Accessibility</h3>
-             <h2 className="font-outfit text-3xl sm:text-4xl md:text-6xl font-extrabold text-matte-slate-900 dark:text-white mb-6 sm:mb-8 tracking-tighter leading-none">
-              One Key Away.
-            </h2>
-            <p className="text-matte-slate-600 dark:text-matte-slate-400 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10">
-              No matter what app you are using, Foldercop is always ready. 
-              The Win + F2 global shortcut summons the search bar instantly. 
-              Hide it just as quickly when you find what you need.
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
+          <div>
+            <span className="text-matte-cyan-600 dark:text-matte-cyan-400 font-semibold uppercase tracking-wider text-xs block mb-2">Instant Access</span>
+            <h3 className="font-outfit text-2xl sm:text-3xl font-bold text-matte-slate-900 dark:text-white mb-4">
+              One Key Combination Away
+            </h3>
+            <p className="text-matte-slate-600 dark:text-matte-slate-400 text-sm sm:text-base leading-relaxed mb-6">
+              No matter what software you are currently working in, Foldercop is ready. 
+              The global shortcut summons the clean search overlay immediately. Dismiss it just as easily when finished.
             </p>
-            <div className="flex gap-4">
-              <div className="bg-matte-slate-100 dark:bg-matte-slate-900 border border-matte-slate-200 dark:border-matte-slate-800 p-3 sm:p-4 rounded-2xl flex items-center justify-center font-bold text-xl sm:text-2xl shadow-sm min-w-[60px] sm:min-w-[80px]">Win</div>
-              <div className="flex items-center text-matte-slate-400 text-xl">+</div>
-              <div className="bg-matte-cyan-500 border border-matte-cyan-600 p-3 sm:p-4 rounded-2xl flex items-center justify-center font-bold text-xl sm:text-2xl shadow-xl text-white min-w-[60px] sm:min-w-[80px]">F2</div>
+            <div className="flex items-center gap-2.5">
+              <kbd className="px-3 py-1.5 text-xs font-mono font-semibold bg-matte-slate-100 dark:bg-matte-slate-800 border border-matte-slate-300 dark:border-matte-slate-700 rounded-md text-matte-slate-800 dark:text-matte-slate-200 shadow-sm">
+                Win
+              </kbd>
+              <span className="text-matte-slate-400 font-bold">+</span>
+              <kbd className="px-3 py-1.5 text-xs font-mono font-semibold bg-matte-cyan-600 text-white border border-matte-cyan-700 rounded-md shadow-sm">
+                F2
+              </kbd>
             </div>
           </div>
-          <div>
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-matte-cyan-500/10 rounded-2xl flex items-center justify-center text-matte-cyan-600 dark:text-matte-cyan-400 mb-6 sm:mb-8">
-              <Keyboard size={28} />
+          <div className="matte-card p-6 sm:p-8">
+            <div className="w-10 h-10 bg-matte-cyan-500/10 rounded-lg flex items-center justify-center text-matte-cyan-600 dark:text-matte-cyan-400 mb-4">
+              <Keyboard size={20} />
             </div>
-            <div className="matte-card bg-[#fcfcfc] dark:bg-matte-slate-950/60 p-8 sm:p-12 border-matte-slate-100 dark:border-matte-slate-900 rounded-[32px] sm:rounded-[40px] shadow-2xl">
-               <h3 className="font-outfit text-2xl sm:text-3xl font-extrabold text-matte-slate-900 dark:text-white mb-4 sm:mb-6">Workflow Accelerated</h3>
-               <p className="text-matte-slate-600 dark:text-matte-slate-400 text-base sm:text-lg leading-relaxed">
-                 Modern professionals handle hundreds of documents daily. 
-                 By removing the friction of finding files, Foldercop saves you hours of cumulative time every week.
-               </p>
-            </div>
+            <h4 className="font-outfit text-xl font-bold text-matte-slate-900 dark:text-white mb-2">Keyboard-Centric UX</h4>
+            <p className="text-matte-slate-600 dark:text-matte-slate-400 text-sm leading-relaxed">
+              Designed for power users who keep their hands on the keyboard. Navigate results with arrow keys, open containing folder with shortcuts, and preview documents on the fly.
+            </p>
           </div>
         </div>
 
         {/* 3. Categories & Preview */}
-        <div className="matte-card p-8 sm:p-12 md:p-24 relative overflow-hidden flex flex-col items-center text-center border-matte-slate-100 dark:border-matte-slate-900 shadow-2xl">
-           <div className="w-14 h-14 sm:w-20 sm:h-20 bg-matte-cyan-500/10 rounded-3xl flex items-center justify-center text-matte-cyan-600 dark:text-matte-cyan-400 mb-8 sm:mb-10 mx-auto">
-              <LayoutGrid size={32} />
-           </div>
-           <h2 className="font-outfit text-3xl sm:text-5xl md:text-7xl font-extrabold text-matte-slate-900 dark:text-white mb-8 sm:mb-10 tracking-tighter leading-none max-w-4xl">
-             Smart Categorization.
-           </h2>
-           <p className="text-matte-slate-600 dark:text-matte-slate-400 text-base sm:text-xl max-w-3xl mb-10 sm:mb-16 mx-auto leading-relaxed font-medium">
-             Folders, Documents, PDFs, Images, Apps, and Settings. 
-             Everything is divided into clear categories so you can filter results in an instant.
-           </p>
-           
-           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-6 w-full max-w-6xl mx-auto mb-12 sm:mb-20 opacity-80">
-             {['Documents', 'PDFs', 'Images', 'Videos', 'Apps', 'Recycle Bin'].map((cat, i) => (
-               <div key={i} className="bg-matte-slate-50 dark:bg-white/5 border border-matte-slate-100 dark:border-matte-slate-800 p-3 sm:p-6 rounded-2xl shadow-sm hover:border-matte-cyan-500/50 hover:bg-white dark:hover:bg-white/10 transition-all duration-300">
-                  <div className="w-3 h-3 rounded-full bg-matte-cyan-500 mx-auto mb-3 sm:mb-4 blur-[4px]"></div>
-                  <span className="text-[9px] sm:text-sm font-bold text-matte-slate-600 dark:text-white uppercase tracking-widest">{cat}</span>
-               </div>
-             ))}
-           </div>
+        <div className="matte-card p-6 sm:p-10 text-center">
+          <div className="w-11 h-11 bg-matte-cyan-500/10 rounded-lg flex items-center justify-center text-matte-cyan-600 dark:text-matte-cyan-400 mb-4 mx-auto">
+            <LayoutGrid size={22} />
+          </div>
+          <h3 className="font-outfit text-2xl sm:text-3xl font-bold text-matte-slate-900 dark:text-white mb-3">
+            Smart Category Filtering
+          </h3>
+          <p className="text-matte-slate-600 dark:text-matte-slate-400 text-sm sm:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+            Folders, Documents, PDFs, Images, Audio, and Apps. Organize search scope instantly without complex syntax.
+          </p>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mb-10">
+            {['Documents', 'PDFs', 'Images', 'Videos', 'Apps', 'Archives'].map((cat, i) => (
+              <div key={i} className="p-3 bg-matte-slate-50 dark:bg-matte-slate-800/60 border border-matte-slate-200 dark:border-matte-slate-700 rounded-lg text-xs font-semibold text-matte-slate-700 dark:text-matte-slate-300">
+                {cat}
+              </div>
+            ))}
+          </div>
 
-           {/* Preview Feature Details */}
-           <div className="bg-matte-slate-900 dark:bg-matte-slate-950 p-8 sm:p-12 md:p-20 rounded-[32px] sm:rounded-[48px] text-left w-full border border-white/10 shadow-[0px_50px_100px_-10px_rgba(0,0,0,0.5)] relative overflow-hidden">
-             <div className="absolute top-0 right-0 w-64 h-64 bg-matte-cyan-500/10 blur-[100px]"></div>
-             <div className="flex items-start gap-6 sm:gap-12 flex-col lg:flex-row">
-                <div className="bg-white/10 p-4 sm:p-6 rounded-[24px] sm:rounded-[32px] text-white shadow-2xl backdrop-blur-3xl border border-white/20 shrink-0">
-                  <Eye size={36} className="text-matte-cyan-400" />
-                </div>
-                <div>
-                   <h3 className="font-outfit text-2xl sm:text-3xl md:text-5xl font-extrabold text-white mb-4 sm:mb-6 tracking-tight">Instant Side Preview</h3>
-                   <p className="text-matte-slate-400 text-base sm:text-lg md:text-xl leading-relaxed font-medium opacity-80">
-                     A world-class preview engine built directly into your search results. 
-                     Check Images, PDFs, Excel sheets, PPTs, Word docs, Audio clips, and Videos instantly 
-                     on the right panel without ever opening an external application.
-                   </p>
-                </div>
-             </div>
-           </div>
+          {/* Preview Feature Details */}
+          <div className="bg-matte-slate-900 text-white p-6 sm:p-8 rounded-xl text-left border border-matte-slate-800">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-matte-cyan-400 shrink-0">
+                <Eye size={20} />
+              </div>
+              <div>
+                <h4 className="font-outfit text-lg sm:text-xl font-bold text-white mb-1.5">
+                  Instant Side Preview
+                </h4>
+                <p className="text-matte-slate-300 text-sm leading-relaxed">
+                  Embedded preview panel for Images, PDFs, spreadsheets, Word documents, text files, and media without launching separate heavy applications.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center">
-        <h2 className="font-outfit text-3xl sm:text-4xl md:text-6xl font-extrabold text-matte-slate-900 dark:text-white mb-8 sm:mb-10 tracking-tighter">
-          Experience Foldercop Today.
+      <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center max-w-3xl">
+        <h2 className="font-outfit text-2xl sm:text-3xl font-bold text-matte-slate-900 dark:text-white mb-3">
+          Get Started with Foldercop
         </h2>
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
-          <Link to="/downloads" className="matte-btn-primary px-10 sm:px-16 py-4 sm:py-5 text-lg sm:text-xl shadow-2xl shadow-cyan-500/20 active:scale-95 group uppercase tracking-widest w-full sm:w-auto">
-             Download Free <Download size={20} className="inline ml-2 group-hover:translate-y-1 transition-transform" />
+        <p className="text-matte-slate-600 dark:text-matte-slate-400 text-sm sm:text-base mb-8">
+          Free to download, fully offline, and ready to index your system in seconds.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+          <Link to="/downloads" className="matte-btn-primary px-8 py-3 text-sm sm:text-base gap-2 w-full sm:w-auto">
+            Download Free <Download size={16} />
           </Link>
-          <Link to="/contact" className="matte-btn-secondary px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl bg-transparent border-matte-slate-200 dark:border-matte-slate-800 hover:border-matte-cyan-500/50 active:scale-95 w-full sm:w-auto">
-             Contact Sales
+          <Link to="/contact" className="matte-btn-secondary px-6 py-3 text-sm sm:text-base w-full sm:w-auto">
+            Contact Support
           </Link>
         </div>
       </section>

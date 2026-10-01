@@ -169,67 +169,63 @@ const Donate = () => {
       : String(amount)
 
   return (
-    <div className="pt-24 sm:pt-32 pb-24 overflow-hidden">
+    <div className="pt-24 sm:pt-32 pb-20">
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="container mx-auto px-4 sm:px-6 text-center mb-12 sm:mb-20 animate-in fade-in slide-in-from-bottom duration-1000">
-        <div className="inline-flex items-center gap-2 bg-pink-500/10 py-1.5 px-4 rounded-full text-pink-600 dark:text-pink-400 font-bold text-xs uppercase tracking-widest mb-10 shadow-sm border border-pink-500/20">
-          <Heart size={14} className="fill-pink-500" /> Support the Vision
+      <section className="container mx-auto px-4 sm:px-6 text-center mb-12 sm:mb-16">
+        <div className="inline-flex items-center gap-2 bg-matte-slate-100 dark:bg-matte-slate-800/80 border border-matte-slate-200 dark:border-matte-slate-700 py-1 px-3.5 rounded-md text-matte-slate-700 dark:text-matte-slate-300 font-medium text-xs mb-6">
+          <Heart size={14} className="text-matte-cyan-600 dark:text-matte-cyan-400" />
+          <span>Support Foldercop</span>
         </div>
-        <h1 className="hero-title mb-6 sm:mb-8 tracking-tight text-4xl sm:text-6xl md:text-7xl">Support Our Core Team.</h1>
-        <p className="text-matte-slate-600 dark:text-matte-slate-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed px-2">
-          Foldercop is free and open source, built by two developers in their spare time.
-          Even a small contribution keeps the project alive and improving.
+        <h1 className="hero-title mb-4 max-w-4xl mx-auto">Support Independent Software</h1>
+        <p className="text-matte-slate-600 dark:text-matte-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          Foldercop is maintained independently. If it saves you time each day, a voluntary contribution helps support future development.
         </p>
       </section>
 
       {/* ── Inline Donor Registration Form ───────────────────────────────── */}
-      <section className="container mx-auto px-4 sm:px-6 max-w-2xl mb-12 sm:mb-16">
-        <div className="matte-card bg-white dark:bg-[#0c0c0c] border border-matte-slate-100 dark:border-matte-slate-800 p-6 sm:p-10 relative overflow-hidden shadow-xl">
-          {/* Decorative glow */}
-          <div className="absolute top-0 right-0 w-48 h-48 bg-pink-500/5 blur-[80px] pointer-events-none" />
-
+      <section className="container mx-auto px-4 sm:px-6 max-w-xl mb-12 sm:mb-16">
+        <div className="matte-card p-6 sm:p-8">
           {/* Header */}
           <div className="flex items-center gap-3 mb-2">
-            <div className="w-10 h-10 bg-pink-500/10 rounded-2xl flex items-center justify-center text-pink-500 shrink-0">
-              <Heart size={20} />
+            <div className="w-10 h-10 bg-matte-cyan-500/10 rounded-lg flex items-center justify-center text-matte-cyan-600 dark:text-matte-cyan-400 shrink-0">
+              <Heart size={18} />
             </div>
-            <h2 className="font-outfit text-2xl font-extrabold text-matte-slate-900 dark:text-white tracking-tight">
-              Add Yourself to Hall of Fame
-            </h2>
+            <div>
+              <h2 className="font-outfit text-xl font-bold text-matte-slate-900 dark:text-white">
+                Register Your Support
+              </h2>
+              <p className="text-matte-slate-500 dark:text-matte-slate-400 text-xs">
+                Optional: Include your details to be listed in the Hall of Fame table below.
+              </p>
+            </div>
           </div>
-
-          {/* "Please fill this form" notice */}
-          <p className="text-matte-slate-500 dark:text-matte-slate-400 text-sm mb-8 ml-1">
-            Please fill this form before donating so we can recognize you publicly.{' '}
-            <span className="italic opacity-70">(Optional — you can skip if you prefer to stay anonymous.)</span>
-          </p>
 
           {formSubmitted ? (
             /* ── Success State ── */
-            <div className="flex flex-col items-center text-center gap-4 py-8">
-              <div className="w-16 h-16 bg-emerald-500/10 rounded-full flex items-center justify-center text-emerald-500">
-                <Check size={32} strokeWidth={3} />
+            <div className="flex flex-col items-center text-center gap-3 py-6 mt-4">
+              <div className="w-12 h-12 bg-emerald-500/10 rounded-full flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                <Check size={24} strokeWidth={2.5} />
               </div>
-              <h3 className="font-outfit text-xl font-bold text-matte-slate-900 dark:text-white">
-                You're registered! 🎉
+              <h3 className="font-outfit text-lg font-bold text-matte-slate-900 dark:text-white">
+                Registration Received
               </h3>
-              <p className="text-matte-slate-500 dark:text-matte-slate-400 text-sm max-w-xs">
-                Your name will appear in the Hall of Fame after you complete your donation below.
+              <p className="text-matte-slate-600 dark:text-matte-slate-400 text-sm max-w-xs">
+                Your entry will appear in the Hall of Fame once your transfer is completed.
               </p>
               <button
                 onClick={() => { setFormSubmitted(false); setFormData({ name: '', amount: '', city: '', email: '' }) }}
-                className="text-xs text-matte-slate-400 hover:text-matte-cyan-500 transition-colors underline"
+                className="text-xs text-matte-cyan-600 dark:text-matte-cyan-400 hover:underline font-medium mt-2"
               >
                 Submit another entry
               </button>
             </div>
           ) : (
             /* ── Form Fields ── */
-            <form onSubmit={handleFormSubmit} className="flex flex-col gap-6">
+            <form onSubmit={handleFormSubmit} className="flex flex-col gap-4 mt-6">
               {/* Name */}
-              <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-matte-slate-400">
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-semibold text-matte-slate-700 dark:text-matte-slate-300">
                   Your Name *
                 </label>
                 <input
@@ -239,15 +235,14 @@ const Donate = () => {
                   onChange={handleFormChange}
                   placeholder="e.g. Rahil Vahora"
                   required
-                  className="bg-matte-slate-50 dark:bg-matte-slate-900 border border-matte-slate-100 dark:border-matte-slate-800 p-4 rounded-2xl text-matte-slate-900 dark:text-white focus:ring-2 ring-matte-cyan-500/30 outline-none transition-all placeholder:text-matte-slate-300 dark:placeholder:text-matte-slate-600 font-medium"
+                  className="bg-white dark:bg-matte-slate-900 border border-matte-slate-300 dark:border-matte-slate-700 px-3.5 py-2.5 rounded-lg text-sm text-matte-slate-900 dark:text-white focus:border-matte-cyan-600 focus:ring-1 focus:ring-matte-cyan-600 outline-none transition-colors placeholder:text-matte-slate-400"
                 />
               </div>
 
               {/* Email */}
-              <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-matte-slate-400">
-                  Email Address{' '}
-                  <span className="normal-case font-normal opacity-60">(private — not shown publicly)</span>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-semibold text-matte-slate-700 dark:text-matte-slate-300">
+                  Email Address <span className="font-normal text-matte-slate-400">(private — never shown publicly)</span>
                 </label>
                 <input
                   type="email"
@@ -255,32 +250,32 @@ const Donate = () => {
                   value={formData.email}
                   onChange={handleFormChange}
                   placeholder="e.g. rahil@example.com"
-                  className="bg-matte-slate-50 dark:bg-matte-slate-900 border border-matte-slate-100 dark:border-matte-slate-800 p-4 rounded-2xl text-matte-slate-900 dark:text-white focus:ring-2 ring-matte-cyan-500/30 outline-none transition-all placeholder:text-matte-slate-300 dark:placeholder:text-matte-slate-600 font-medium"
+                  className="bg-white dark:bg-matte-slate-900 border border-matte-slate-300 dark:border-matte-slate-700 px-3.5 py-2.5 rounded-lg text-sm text-matte-slate-900 dark:text-white focus:border-matte-cyan-600 focus:ring-1 focus:ring-matte-cyan-600 outline-none transition-colors placeholder:text-matte-slate-400"
                 />
               </div>
 
               {/* Amount + City (side by side) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Amount */}
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-matte-slate-400">
-                    Amount Donated (₹) *
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-semibold text-matte-slate-700 dark:text-matte-slate-300">
+                    Amount (₹) *
                   </label>
                   <input
                     type="number"
                     name="amount"
                     value={formData.amount}
                     onChange={handleFormChange}
-                    placeholder="e.g. 199"
+                    placeholder="e.g. 200"
                     min="1"
                     required
-                    className="bg-matte-slate-50 dark:bg-matte-slate-900 border border-matte-slate-100 dark:border-matte-slate-800 p-4 rounded-2xl text-matte-slate-900 dark:text-white focus:ring-2 ring-matte-cyan-500/30 outline-none transition-all placeholder:text-matte-slate-300 dark:placeholder:text-matte-slate-600 font-medium"
+                    className="bg-white dark:bg-matte-slate-900 border border-matte-slate-300 dark:border-matte-slate-700 px-3.5 py-2.5 rounded-lg text-sm text-matte-slate-900 dark:text-white focus:border-matte-cyan-600 focus:ring-1 focus:ring-matte-cyan-600 outline-none transition-colors placeholder:text-matte-slate-400"
                   />
                 </div>
 
                 {/* City Dropdown */}
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-matte-slate-400">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-semibold text-matte-slate-700 dark:text-matte-slate-300">
                     Your City *
                   </label>
                   <select
@@ -288,7 +283,7 @@ const Donate = () => {
                     value={formData.city}
                     onChange={handleFormChange}
                     required
-                    className="bg-matte-slate-50 dark:bg-matte-slate-900 border border-matte-slate-100 dark:border-matte-slate-800 p-4 rounded-2xl text-matte-slate-900 dark:text-white focus:ring-2 ring-matte-cyan-500/30 outline-none transition-all font-medium appearance-none cursor-pointer"
+                    className="bg-white dark:bg-matte-slate-900 border border-matte-slate-300 dark:border-matte-slate-700 px-3.5 py-2.5 rounded-lg text-sm text-matte-slate-900 dark:text-white focus:border-matte-cyan-600 focus:ring-1 focus:ring-matte-cyan-600 outline-none transition-colors cursor-pointer"
                   >
                     <option value="" disabled>Select city…</option>
                     {CITIES.map(c => (
@@ -298,20 +293,14 @@ const Donate = () => {
                 </div>
               </div>
 
-              {/* Auto time note */}
-              <p className="text-xs text-matte-slate-400 flex items-center gap-1.5 -mt-2">
-                <Calendar size={12} />
-                Submission time is recorded automatically.
-              </p>
-
               <button
                 type="submit"
                 disabled={formLoading}
-                className="matte-btn-primary py-4 flex justify-center items-center gap-2 text-sm font-bold uppercase tracking-widest shadow-lg shadow-cyan-500/10 active:scale-95 disabled:opacity-60"
+                className="matte-btn-primary py-2.5 text-sm font-medium flex items-center justify-center gap-2 mt-2 disabled:opacity-60"
               >
                 {formLoading
-                  ? <><RefreshCw size={16} className="animate-spin" /> Submitting…</>
-                  : <><Send size={16} /> Register My Donation</>
+                  ? <><RefreshCw size={14} className="animate-spin" /> Submitting…</>
+                  : <><Send size={14} /> Register Contribution</>
                 }
               </button>
             </form>
@@ -320,132 +309,121 @@ const Donate = () => {
       </section>
 
       {/* ── Donation Method Cards ─────────────────────────────────────────── */}
-      <section className="container mx-auto px-4 sm:px-6 max-w-md mb-16 sm:mb-24">
-
+      <section className="container mx-auto px-4 sm:px-6 max-w-sm mb-16">
         {/* ── UPI Card ── */}
-        <div className="matte-card hover:-translate-y-1 hover:shadow-xl transition-all duration-300 relative group flex flex-col items-center text-center p-8 border-2 border-matte-cyan-500/20 shadow-lg shadow-cyan-500/5 bg-white dark:bg-matte-slate-900/60">
-          <div className="absolute inset-0 bg-gradient-to-br from-matte-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
-          <div className="w-14 h-14 bg-matte-cyan-500/10 rounded-2xl flex items-center justify-center text-matte-cyan-600 dark:text-matte-cyan-400 mb-4 mx-auto">
-            <CreditCard size={24} />
+        <div className="matte-card p-6 flex flex-col items-center text-center">
+          <div className="w-10 h-10 bg-matte-cyan-500/10 rounded-lg flex items-center justify-center text-matte-cyan-600 dark:text-matte-cyan-400 mb-3 mx-auto">
+            <CreditCard size={20} />
           </div>
-          <h3 className="font-outfit text-lg font-extrabold text-matte-slate-900 dark:text-white mb-1">
-            UPI (India)
+          <h3 className="font-outfit text-lg font-bold text-matte-slate-900 dark:text-white mb-0.5">
+            Instant UPI Transfer
           </h3>
           <p className="text-matte-slate-500 dark:text-matte-slate-400 text-xs mb-4">
-            GPay · PhonePe · Paytm · any UPI app
+            Supports Google Pay, PhonePe, Paytm & any BHIM UPI app
           </p>
 
           {/* QR */}
-          <div className="bg-white p-2.5 rounded-2xl mb-4 shadow-inner border border-matte-slate-100">
-            <img src={qrUrl} alt="UPI QR Code" className="w-[120px] h-[120px]" />
+          <div className="bg-white p-2 rounded-lg mb-4 border border-matte-slate-200 dark:border-matte-slate-700 shadow-sm">
+            <img src={qrUrl} alt="UPI QR Code" className="w-[130px] h-[130px]" />
           </div>
 
           <button
             onClick={handleCopy}
-            className="flex items-center justify-center gap-2 text-sm font-bold text-matte-slate-500 hover:text-matte-cyan-500 py-2.5 w-full rounded-xl border border-dashed border-matte-slate-200 dark:border-matte-slate-700 transition-colors mb-3"
+            className="flex items-center justify-center gap-2 text-xs font-mono text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-600 py-2 w-full rounded-md border border-matte-slate-300 dark:border-matte-slate-700 bg-matte-slate-50 dark:bg-matte-slate-800 transition-colors mb-3"
           >
-            {copied ? <Check size={14} className="text-emerald-500" /> : <Copy size={14} />}
-            {copied ? 'Copied!' : upiId}
+            {copied ? <Check size={13} className="text-emerald-500" /> : <Copy size={13} />}
+            {copied ? 'Copied to clipboard' : upiId}
           </button>
           <a
             href={upiLink}
-            className="matte-btn-primary w-full text-sm uppercase tracking-wider font-bold text-center py-3"
+            className="matte-btn-primary w-full text-xs font-semibold uppercase tracking-wider py-2.5 text-center"
           >
-            Open UPI App
+            Open in UPI App
           </a>
         </div>
-
       </section>
 
       {/* ── Security Strip ───────────────────────────────────────────────── */}
-      <section className="container mx-auto px-4 sm:px-6 max-w-5xl mb-16 sm:mb-24">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+      <section className="container mx-auto px-4 sm:px-6 max-w-4xl mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
-            { icon: <ShieldCheck size={16} />, text: 'Your data is used only for support purposes.' },
-            { icon: <Zap size={16} />, text: 'No subscription — donate once, anytime.' },
-            { icon: <Heart size={16} />, text: 'Every rupee goes directly to the developers.' },
+            { icon: <ShieldCheck size={16} />, text: 'Data submitted is used solely for Hall of Fame acknowledgment.' },
+            { icon: <Zap size={16} />, text: 'One-time voluntary contribution. No subscription or recurring fees.' },
+            { icon: <Heart size={16} />, text: '100% of contributions go directly to the two core developers.' },
           ].map((item, i) => (
-            <div key={i} className="flex items-center gap-3 bg-matte-slate-50 dark:bg-matte-slate-900/40 border border-matte-slate-100 dark:border-matte-slate-800 rounded-2xl px-5 py-4">
-              <span className="text-matte-cyan-500 shrink-0">{item.icon}</span>
-              <p className="text-xs font-bold text-matte-slate-600 dark:text-matte-slate-400">{item.text}</p>
+            <div key={i} className="flex items-start gap-3 p-4 bg-matte-slate-50 dark:bg-matte-slate-900/60 border border-matte-slate-200 dark:border-matte-slate-800 rounded-lg">
+              <span className="text-matte-cyan-600 dark:text-matte-cyan-400 shrink-0 mt-0.5">{item.icon}</span>
+              <p className="text-xs text-matte-slate-600 dark:text-matte-slate-400 leading-relaxed">{item.text}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* ── Hall of Fame ─────────────────────────────────────────────────── */}
-      <section className="container mx-auto px-4 sm:px-6 max-w-5xl">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10">
+      <section className="container mx-auto px-4 sm:px-6 max-w-4xl">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
           <div>
-            <h2 className="font-outfit text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-1">
+            <h2 className="font-outfit text-xl sm:text-2xl font-bold text-matte-slate-900 dark:text-white mb-1">
               Hall of Fame
             </h2>
-            <p className="text-matte-slate-500 dark:text-matte-slate-400 text-sm font-medium">
-              People who powered FolderCop's development.
+            <p className="text-matte-slate-600 dark:text-matte-slate-400 text-xs sm:text-sm">
+              Community supporters who have contributed to Foldercop.
             </p>
           </div>
-          <div className="flex items-center gap-4 shrink-0">
+          <div className="flex items-center gap-3 shrink-0">
             {!loading && !error && totalINR > 0 && (
-              <div className="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 rounded-2xl px-4 py-2 text-sm font-bold font-outfit">
-                Total: ₹{totalINR.toLocaleString('en-IN')}
+              <div className="bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 rounded-md px-3 py-1.5 text-xs font-semibold">
+                Total Raised: ₹{totalINR.toLocaleString('en-IN')}
               </div>
             )}
             <button
               onClick={fetchSupporters}
               disabled={loading}
-              className="flex items-center gap-1.5 text-xs text-matte-slate-400 hover:text-matte-cyan-500 transition-colors font-bold uppercase tracking-wider"
+              className="flex items-center gap-1 text-xs text-matte-slate-600 dark:text-matte-slate-400 hover:text-matte-cyan-600 dark:hover:text-matte-cyan-400 transition-colors font-medium"
             >
-              <RefreshCw size={13} className={loading ? 'animate-spin' : ''} />
+              <RefreshCw size={12} className={loading ? 'animate-spin' : ''} />
               Refresh
             </button>
           </div>
         </div>
 
-        <div className="matte-card p-0 overflow-hidden border border-matte-slate-100 dark:border-matte-slate-800 shadow-xl overflow-x-auto">
-
+        <div className="matte-card p-0 overflow-hidden border border-matte-slate-200 dark:border-matte-slate-800 rounded-lg">
           {/* ── Table ── */}
           {!loading && !error && supporters.length > 0 && (
             <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse">
+              <table className="w-full text-left border-collapse text-sm">
                 <thead>
-                  <tr className="bg-matte-slate-50 dark:bg-matte-slate-800/50">
-                    <th className="px-6 py-4 text-xs uppercase tracking-widest font-black text-matte-slate-400">#</th>
-                    <th className="px-6 py-4 text-xs uppercase tracking-widest font-black text-matte-slate-400">Supporter</th>
-                    <th className="px-6 py-4 text-xs uppercase tracking-widest font-black text-matte-slate-400 hidden sm:table-cell">Location</th>
-                    <th className="px-6 py-4 text-xs uppercase tracking-widest font-black text-matte-slate-400 hidden md:table-cell">Date</th>
-                    <th className="px-6 py-4 text-xs uppercase tracking-widest font-black text-matte-slate-400 text-right">Amount</th>
+                  <tr className="bg-matte-slate-50 dark:bg-matte-slate-800/80 border-b border-matte-slate-200 dark:border-matte-slate-800">
+                    <th className="px-5 py-3 text-xs uppercase tracking-wider font-semibold text-matte-slate-500">#</th>
+                    <th className="px-5 py-3 text-xs uppercase tracking-wider font-semibold text-matte-slate-500">Supporter</th>
+                    <th className="px-5 py-3 text-xs uppercase tracking-wider font-semibold text-matte-slate-500 hidden sm:table-cell">Location</th>
+                    <th className="px-5 py-3 text-xs uppercase tracking-wider font-semibold text-matte-slate-500 hidden md:table-cell">Date</th>
+                    <th className="px-5 py-3 text-xs uppercase tracking-wider font-semibold text-matte-slate-500 text-right">Amount</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="divide-y divide-matte-slate-100 dark:divide-matte-slate-800">
                   {supporters.map((s, i) => (
                     <tr
                       key={i}
-                      className="group border-t border-matte-slate-50 dark:border-matte-slate-800/60 hover:bg-matte-cyan-500/[0.03] transition-colors"
+                      className="hover:bg-matte-slate-50/50 dark:hover:bg-matte-slate-800/40 transition-colors"
                     >
-                      <td className="px-6 py-4 text-xs text-matte-slate-400 font-mono">{i + 1}</td>
-                      <td className="px-6 py-4">
-                        <div>
-                          <span className="font-outfit font-bold text-matte-slate-900 dark:text-white group-hover:text-matte-cyan-500 transition-colors">
-                            {s.name}
-                          </span>
-                          {s.message && (
-                            <p className="text-xs text-matte-slate-400 mt-0.5 italic truncate max-w-[180px]">
-                              "{s.message}"
-                            </p>
-                          )}
-                        </div>
+                      <td className="px-5 py-3 text-xs text-matte-slate-400 font-mono">{i + 1}</td>
+                      <td className="px-5 py-3 font-medium text-matte-slate-900 dark:text-white">
+                        {s.name}
+                        {s.message && (
+                          <p className="text-xs text-matte-slate-500 dark:text-matte-slate-400 mt-0.5 italic truncate max-w-[180px]">
+                            "{s.message}"
+                          </p>
+                        )}
                       </td>
-                      <td className="px-6 py-4 hidden sm:table-cell text-sm text-matte-slate-500 dark:text-matte-slate-400 font-medium">
+                      <td className="px-5 py-3 hidden sm:table-cell text-sm text-matte-slate-600 dark:text-matte-slate-400">
                         {s.city}
                       </td>
-                      <td className="px-6 py-4 hidden md:table-cell">
-                        <div className="flex items-center gap-1.5 text-xs text-matte-slate-400">
-                          <Calendar size={12} className="text-matte-cyan-500/50" />
-                          {s.date}
-                        </div>
+                      <td className="px-5 py-3 hidden md:table-cell text-xs text-matte-slate-500 dark:text-matte-slate-400">
+                        {s.date}
                       </td>
-                      <td className="px-6 py-4 text-right">
-                        <span className="inline-flex items-center px-2.5 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-lg font-outfit font-black text-sm">
+                      <td className="px-5 py-3 text-right">
+                        <span className="inline-flex items-center px-2 py-0.5 bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 rounded font-semibold text-xs">
                           {displayAmount(s.amount)}
                         </span>
                       </td>
@@ -458,41 +436,37 @@ const Donate = () => {
 
           {/* Loading */}
           {loading && (
-            <div className="flex items-center justify-center gap-3 py-16 text-matte-slate-400">
-              <RefreshCw size={16} className="animate-spin" />
-              <span className="text-sm font-medium">Loading supporters…</span>
+            <div className="flex items-center justify-center gap-2 py-12 text-matte-slate-400">
+              <RefreshCw size={14} className="animate-spin" />
+              <span className="text-xs font-medium">Loading supporter records…</span>
             </div>
           )}
 
           {/* Error */}
           {!loading && error && (
-            <div className="text-center py-16 px-6">
-              <p className="text-matte-slate-400 text-sm mb-4">
-                Could not load supporter data. Check your internet connection.
+            <div className="text-center py-12 px-4">
+              <p className="text-matte-slate-500 text-xs mb-3">
+                Could not retrieve records. Please check your internet connection.
               </p>
-              <button onClick={fetchSupporters} className="matte-btn-secondary text-sm">
-                Try Again
+              <button onClick={fetchSupporters} className="matte-btn-secondary text-xs py-1 px-3">
+                Retry
               </button>
             </div>
           )}
 
           {/* Empty */}
           {!loading && !error && supporters.length === 0 && (
-            <div className="text-center py-16 px-6">
-              <p className="text-matte-slate-400 text-sm">
-                No donations yet — be the first! 🌟
+            <div className="text-center py-12 px-4">
+              <p className="text-matte-slate-500 text-xs">
+                No recorded entries yet.
               </p>
             </div>
           )}
         </div>
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-6 px-1 gap-2">
-          <p className="text-xs text-matte-slate-400 uppercase tracking-[0.15em] font-bold">
-            Live from Google Sheets · auto-refreshes every 2 min
-          </p>
-          {lastUpdated && (
-            <p className="text-xs text-matte-slate-400">Last updated: {lastUpdated}</p>
-          )}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-3 px-1 gap-2 text-xs text-matte-slate-400">
+          <span>Synced with verified Google Sheets record</span>
+          {lastUpdated && <span>Last checked: {lastUpdated}</span>}
         </div>
       </section>
     </div>

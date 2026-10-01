@@ -1,187 +1,81 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Zap, Shield, Search, Download } from 'lucide-react'
-import VideoPlayer from '../components/VideoPlayer'
+import { ArrowRight, Search, Activity, Package, Droplets } from 'lucide-react'
 
 const Home = () => {
-  const whatsapp = '+917990471946'
-
   return (
-    <div className="pt-20 sm:pt-32 pb-24 overflow-hidden">
-
+    <div className="pt-24 sm:pt-32 pb-20">
       {/* ───────────── HERO SECTION ───────────── */}
-      <section className="container mx-auto px-4 sm:px-6 text-center relative">
-        {/* Glow blob */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[600px] h-[200px] sm:h-[600px] bg-matte-cyan-500/10 blur-[80px] -z-10 rounded-full" />
-
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-matte-slate-50 dark:bg-matte-slate-900 border border-matte-slate-200 dark:border-matte-slate-800 py-1.5 px-3 sm:px-4 rounded-full text-matte-slate-600 dark:text-matte-slate-400 font-bold text-[10px] sm:text-xs uppercase tracking-widest mb-5 sm:mb-10 shadow-sm animate-in fade-in slide-in-from-bottom duration-700">
-          <Zap size={12} className="text-matte-cyan-500 fill-matte-cyan-500" /> Latest version 1.1.0 available
+      <section className="container mx-auto px-4 sm:px-6 text-center">
+        <div className="inline-flex items-center gap-2 bg-matte-slate-100 dark:bg-matte-slate-800/80 border border-matte-slate-200 dark:border-matte-slate-700 py-1 px-3.5 rounded-md text-matte-slate-700 dark:text-matte-slate-300 font-medium text-xs mb-6">
+          <Package size={14} className="text-matte-cyan-600 dark:text-matte-cyan-400" />
+          <span>Foldercop Software Suite</span>
         </div>
 
-        {/* Headline */}
-        <h1 className="hero-title mb-3 sm:mb-6 font-extrabold tracking-tighter uppercase underline decoration-matte-cyan-500/30 text-3xl sm:text-6xl md:text-7xl leading-tight">
-          Never Search.<br className="sm:hidden" /> Just Find.
+        <h1 className="hero-title mb-4 sm:mb-6 max-w-4xl mx-auto">
+          Tools That Drive Productivity.
         </h1>
 
-        {/* Description */}
-        <p className="text-matte-slate-600 dark:text-matte-slate-400 text-sm sm:text-lg md:text-xl max-w-3xl mx-auto mb-6 sm:mb-12 leading-relaxed animate-in fade-in slide-in-from-bottom duration-1000 delay-200 px-2">
-          Foldercop replaces the slow Windows search with a modern, high-intensity engine.
-          From deep project files to system settings, everything is indexed for instant retrieval.
+        <p className="text-matte-slate-600 dark:text-matte-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-12 sm:mb-16 leading-relaxed">
+          High-performance desktop &amp; mobile utilities engineered for speed, privacy, and seamless daily workflow.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-10 sm:mb-20 animate-in fade-in slide-in-from-bottom duration-1000 delay-300 px-4">
-          <a
-            href="https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.1.0/FolderCop_Setup.exe"
-            className="matte-btn-primary flex items-center justify-center gap-2 shadow-xl shadow-matte-cyan-500/20 group text-sm sm:text-lg px-6 sm:px-10 py-3 sm:py-4 w-full sm:w-auto"
-          >
-            Get Foldercop Free <Download size={16} className="transition-transform group-hover:translate-y-1" />
-          </a>
-          <Link
-            to="/about"
-            className="matte-btn-secondary flex items-center justify-center gap-2 group text-sm sm:text-lg px-6 sm:px-10 py-3 sm:py-4 w-full sm:w-auto"
-          >
-            Explore Features <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
-
-        {/* ── VIDEO SECTION ── */}
-        <div className="animate-in fade-in slide-in-from-bottom duration-1000 delay-500 w-full">
-          <div className="max-w-3xl mx-auto px-0 sm:px-2">
-            <VideoPlayer src="/foldercop.mp4" muted={false} />
-          </div>
-        </div>
-      </section>
-
-      {/* ───────────── FEATURE GRID ───────────── */}
-      <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-40 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-8">
-        {[
-          {
-            icon: <Zap size={22} />,
-            title: 'Incredible Speed',
-            desc: 'Indexes millions of files in seconds using Windows USN Journal technology. Searching becomes instant.',
-          },
-          {
-            icon: <Shield size={22} />,
-            title: 'Fully Offline',
-            desc: 'Privacy is our priority. Foldercop works 100% offline. Your data never leaves your local machine.',
-          },
-          {
-            icon: <Search size={22} />,
-            title: 'Categorization',
-            desc: 'Switch between Images, PDFs, Documents, and more with a single click. Stay organized automatically.',
-          },
-        ].map((f, i) => (
-          <div
-            key={i}
-            className="matte-card hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group p-5 sm:p-8"
-          >
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-matte-cyan-500/10 rounded-2xl flex items-center justify-center text-matte-cyan-600 dark:text-matte-cyan-400 mb-4 sm:mb-6 group-hover:bg-matte-cyan-500 group-hover:text-white transition-colors duration-300">
-              {f.icon}
+        {/* ───────────── PRODUCT GRID ───────────── */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto text-left">
+          
+          {/* Foldercop Search Card */}
+          <div className="matte-card p-6 sm:p-7 flex flex-col h-full hover:border-matte-slate-300 dark:hover:border-matte-slate-700 transition-colors">
+            <div className="w-11 h-11 bg-matte-cyan-500/10 rounded-lg flex items-center justify-center text-matte-cyan-600 dark:text-matte-cyan-400 mb-5">
+              <Search size={22} />
             </div>
-            <h3 className="font-outfit text-lg sm:text-xl font-bold text-matte-slate-900 dark:text-white mb-2 sm:mb-3 tracking-tight">
-              {f.title}
-            </h3>
-            <p className="text-matte-slate-600 dark:text-matte-slate-400 leading-relaxed text-sm">{f.desc}</p>
-          </div>
-        ))}
-      </section>
-
-      {/* ───────────── CREATORS SECTION ───────────── */}
-      <section className="mx-4 sm:mx-6 px-4 sm:px-8 py-12 sm:py-24 bg-matte-slate-50/50 dark:bg-matte-slate-900/20 rounded-[1.5rem] sm:rounded-[3rem] border border-matte-slate-100 dark:border-matte-slate-800">
-        <div className="text-center mb-10 sm:mb-16">
-          <h2 className="font-outfit text-2xl sm:text-3xl md:text-5xl font-extrabold mb-3 sm:mb-4 tracking-tight">
-            Meet the Visionaries.
-          </h2>
-          <p className="text-matte-slate-600 dark:text-matte-slate-400 text-sm sm:text-lg">
-            The minds behind the world's fastest file explorer.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12 max-w-4xl mx-auto">
-          {/* Yasin Vahora */}
-          <div className="matte-card group relative p-5 sm:p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-500">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-matte-cyan-500/5 blur-3xl -z-10 group-hover:bg-matte-cyan-500/10 transition-colors" />
-            <div className="mb-5 sm:mb-6 relative">
-              <div className="w-20 h-20 sm:w-32 sm:h-32 rounded-3xl rotate-3 group-hover:rotate-6 transition-transform overflow-hidden border-2 border-matte-cyan-500/20">
-                <img
-                  src="https://github.com/yasinvahora56.png"
-                  alt="Yasin Vahora"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-transform duration-500"
-                />
-              </div>
-              <div className="absolute -bottom-2 -right-2 bg-matte-cyan-500 text-white p-2 rounded-xl shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
-                <Zap size={14} />
-              </div>
+            <h2 className="font-outfit text-xl font-bold text-matte-slate-900 dark:text-white mb-2">
+              Foldercop Search
+            </h2>
+            <p className="text-matte-slate-600 dark:text-matte-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+              Instant local file search engine for Windows. Indexes millions of files within seconds using direct filesystem journal access. 100% offline.
+            </p>
+            <div>
+              <Link to="/foldercop-search" className="matte-btn-primary gap-2 w-full text-sm">
+                Explore Foldercop <ArrowRight size={15} />
+              </Link>
             </div>
-            <h3 className="font-outfit text-lg sm:text-2xl font-bold text-matte-slate-900 dark:text-white mb-1">
-              Yasin Vahora
-            </h3>
-            <p className="text-matte-cyan-500 font-bold text-[10px] sm:text-xs uppercase tracking-widest mb-3 sm:mb-4">
-              Lead Developer & Architect
-            </p>
-            <p className="text-matte-slate-600 dark:text-matte-slate-400 leading-relaxed italic text-sm">
-              "Built for speed, refined for humans. FolderCop is the realization of years of research into
-              high-performance file systems."
-            </p>
           </div>
 
-          {/* Rahil Vahora */}
-          <div className="matte-card group relative p-5 sm:p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-500">
-            <div className="absolute top-0 left-0 w-32 h-32 bg-indigo-500/5 blur-3xl -z-10 group-hover:bg-indigo-500/10 transition-colors" />
-            <div className="mb-5 sm:mb-6 relative">
-              <div className="w-20 h-20 sm:w-32 sm:h-32 rounded-3xl -rotate-3 group-hover:-rotate-6 transition-transform overflow-hidden border-2 border-indigo-500/20">
-                <img
-                  src="https://github.com/rahil1202.png"
-                  alt="Rahil Vahora"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-transform duration-500"
-                />
-              </div>
-              <div className="absolute -bottom-2 -right-2 bg-indigo-500 text-white p-2 rounded-xl shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
-                <Search size={14} />
-              </div>
+          {/* Medical Software Card */}
+          <div className="matte-card p-6 sm:p-7 flex flex-col h-full hover:border-matte-slate-300 dark:hover:border-matte-slate-700 transition-colors">
+            <div className="w-11 h-11 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-5">
+              <Activity size={22} />
             </div>
-            <h3 className="font-outfit text-lg sm:text-2xl font-bold text-matte-slate-900 dark:text-white mb-1">
-              Rahil Vahora
-            </h3>
-            <p className="text-indigo-500 font-bold text-[10px] sm:text-xs uppercase tracking-widest mb-3 sm:mb-4">
-              UX Engineer & Full Stack
+            <h2 className="font-outfit text-xl font-bold text-matte-slate-900 dark:text-white mb-2">
+              MediShop Pro
+            </h2>
+            <p className="text-matte-slate-600 dark:text-matte-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+              Medical billing and pharmacy inventory management software. Designed for precision, compliance, and streamlined counter operations.
             </p>
-            <p className="text-matte-slate-600 dark:text-matte-slate-400 leading-relaxed italic text-sm">
-              "Designing the full-stack rollercoaster. My focus is on making the immense power of our indexing
-              engine feel effortless to use."
-            </p>
+            <div>
+              <Link to="/medical-software" className="matte-btn-primary bg-emerald-600 hover:bg-emerald-700 gap-2 w-full text-sm">
+                Explore MediShop Pro <ArrowRight size={15} />
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* ───────────── TRUST CTA ───────────── */}
-      <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-24">
-        <div className="matte-card bg-matte-slate-900 dark:bg-matte-slate-900/40 text-white p-6 sm:p-12 md:p-20 text-center relative overflow-hidden group rounded-2xl sm:rounded-3xl">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-matte-cyan-500/10 blur-[100px] -z-10 group-hover:scale-150 transition-transform duration-1000" />
-          <h2 className="font-outfit text-xl sm:text-3xl md:text-5xl font-extrabold mb-4 sm:mb-8 tracking-tight leading-tight">
-            Stop searching. Start finding.
-          </h2>
-          <p className="text-matte-slate-400 text-sm sm:text-lg md:text-xl max-w-xl mx-auto mb-6 sm:mb-12 px-2">
-            Foldercop is free, private, and built for professionals. Join the future of Windows file management
-            today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2">
-            <a
-              href="https://github.com/yasinvahora56/foldercop-releses/releases/download/v1.1.0/FolderCop_Setup.exe"
-              className="matte-btn-primary md:px-12 md:py-4 shadow-2xl shadow-cyan-500/20 active:scale-95 text-sm sm:text-lg w-full sm:w-auto"
-            >
-              Download Now
-            </a>
-            <a
-              href={`https://wa.me/${whatsapp.replace('+', '')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="matte-btn-secondary bg-white/10 dark:bg-white/5 border-white/20 text-white hover:bg-white/20 active:scale-95 text-sm sm:text-lg w-full sm:w-auto"
-            >
-              Contact Sales Support
-            </a>
+          {/* HydroFlow Water Tracker Card */}
+          <div className="matte-card p-6 sm:p-7 flex flex-col h-full border-matte-cyan-500/30 hover:border-matte-cyan-500 transition-colors relative overflow-hidden">
+            <div className="w-11 h-11 rounded-lg overflow-hidden mb-5 shadow-sm border border-cyan-500/20">
+              <img src="/hydroflow-logo.png" alt="HydroFlow" className="w-full h-full object-cover" />
+            </div>
+            <h2 className="font-outfit text-xl font-bold text-matte-slate-900 dark:text-white mb-2 flex items-center gap-2">
+              HydroFlow <span className="text-[10px] uppercase font-bold tracking-wider bg-cyan-100 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300 px-2 py-0.5 rounded-full">Free App</span>
+            </h2>
+            <p className="text-matte-slate-600 dark:text-matte-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+              Smart daily water intake tracker with customizable alarm period alerts. 100% free, zero data misuse, and offline safe.
+            </p>
+            <div>
+              <Link to="/water-tracker" className="matte-btn-primary bg-cyan-600 hover:bg-cyan-700 gap-2 w-full text-sm">
+                Explore HydroFlow <ArrowRight size={15} />
+              </Link>
+            </div>
           </div>
+
         </div>
       </section>
     </div>

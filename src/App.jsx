@@ -3,12 +3,15 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import FoldercopSearch from './pages/FoldercopSearch'
+import MedicalSoftware from './pages/MedicalSoftware'
 import About from './pages/About'
 import AboutUs from './pages/AboutUs'
 import Downloads from './pages/Downloads'
 import Donate from './pages/Donate'
 import Contact from './pages/Contact'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import WaterTracker from './pages/WaterTracker'
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
@@ -36,6 +39,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/foldercop-search" element={<FoldercopSearch />} />
+          <Route path="/medical-software" element={<MedicalSoftware />} />
+          <Route path="/water-tracker" element={<WaterTracker />} />
           <Route path="/about" element={<About />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/downloads" element={<Downloads />} />
